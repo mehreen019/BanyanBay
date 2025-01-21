@@ -1,4 +1,234 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap');
 
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    background-color: #010101;
+    color: #ffffff;
+}
+
+/* mail icon */
+svg {
+    width: 25px;
+}
+
+/* header */
+header {
+    width: 1200px;
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+}
+
+header .logo {
+    font-weight: bold;
+}
+
+header .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 500;
+}
+
+/* slider */
+.slider {
+    height: 100vh;
+    margin-top: -50px;
+    position: relative;
+}
+
+.slider .list .item {
+    position: absolute;
+    inset: 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+}
+
+.slider .list .item::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: -300px;
+    background-image: linear-gradient(
+        to bottom, #111111 1px, transparent
+    );
+}
+
+.slider .list .item .content {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 700px;
+    max-width: 80%;
+    z-index: 1;
+}
+
+.slider .list .item .content p:nth-child(1) {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.slider .list .item .content h2 {
+    font-size: 100px;
+    margin: 0;
+}
+
+.slider .list .item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+.slider .list .item button {
+    background-color: #eee5;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    color: #eee;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slider .list .item.active p:nth-child(1), 
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3),
+.slider .list .item.active button {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+
+.slider .list .item.active h2 {
+    animation-delay: 1s;
+    animation-duration: 1.2s;
+}
+
+.slider .list .item.active p:nth-child(3) {
+    animation-duration: 1.3s;
+}
+
+.slider .list .item.active button {
+    animation-duration: 1.3s;
+}
+
+/* arrows */
+.arrows {
+    position: absolute;
+    top: 35%;
+    right: 50px;
+    z-index: 100;
+}
+
+.arrows button {
+    background-color: #eee5;
+    border: none;
+    font-family: monospace;
+    font-size: x-large;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    color: #eee;
+    transition: 0.5s;
+}
+
+.arrows button:hover {
+    background-color: #eee;
+    color: #0a0a0a;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 20px;  /* Space between text div and mouse icon */
+}
+
+.scroll > div:first-child {
+    display: flex;
+    flex-direction: column;  /* Stack the text elements vertically */
+}
+
+.scroll p {
+    margin: 0;
+}
+
+.scroll p:nth-child(2) {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+/* Mouse scroll animation */
+.mouse {
+    width: 25px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    position: relative;
+}
+
+.mouse::before {
+    content: '';
+    width: 4px;
+    height: 8px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 2px;
+    top: 8px;
+    animation: scroll 1.3s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        top: 8px;
+    }
+    100% {
+        opacity: 0;
+        top: 24px;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .slider .list .item .content h2{
+        font-size: 60px;
+    }
+
+    .arrows {
+        top: 10%;
+    }
+}
