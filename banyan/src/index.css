@@ -229,7 +229,7 @@ header .menu {
     }
 }
 
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 768px) {
     .slider .list .item .content h2{
         font-size: 60px;
     }
@@ -413,5 +413,5 @@ header .menu {
 {
     animation: appear 5s ease-in-out 1 forwards;
     animation-timeline: view();
-    animation-range: entry 0% cover 42%;
+    animation-range: entry 0% cover 40%;
 }

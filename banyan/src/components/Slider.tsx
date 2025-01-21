@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 const IMAGES = [
     { url: img1, alt: "Slider One", headertxt: "Banyan Bay", btntxt: "Learn More" },
     { url: img2, alt: "Slider Two", headertxt: "Our Story", btntxt: "Learn More" },
-    { url: img3, alt: "Slider Three", headertxt: "Bbay Travels", btntxt: "Go to Website" },
+    { url: img3, alt: "Slider Three", headertxt: "Bbay Travel", btntxt: "Go to Website" },
   ]
 
 const Slider = () => {
