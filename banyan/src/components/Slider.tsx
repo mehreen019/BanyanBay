@@ -30,6 +30,7 @@ const Slider = () => {
     };
     
     return (
+        <section id="home">
         <div className='slider'>
             <div className='list'>
                 {IMAGES.map((image, index) => (
@@ -58,6 +59,7 @@ const Slider = () => {
                 <div className="mouse"></div>
             </div>
         </div>
+        </section>
     );
 };
 

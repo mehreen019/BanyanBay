@@ -5,9 +5,9 @@ const NavBar = () => {
     <header>
         <div className="logo">BanyanBay</div>
         <ul className="menu">
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li> <a className='nav-link' href="#home">Home</a> </li>
+            <li> <a className='nav-link' href="#about-us">About</a> </li>
+            <li> <a className='nav-link' href="#contact-area">Contact</a> </li>
         </ul>
         <div className="search">
             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
