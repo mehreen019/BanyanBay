@@ -1,16 +1,16 @@
-import About_Us from "./components/About_Us"
-import Contact from "./components/Contact"
-import NavBar from "./components/NavBar"
-import Slider from "./components/Slider"
-  
+import { BrowserRouter } from "react-router-dom"
+import { Routes } from "react-router-dom"
+import { Route } from "react-router-dom"
+import Home from "./pages/Home"
+import Travel from "./pages/Travel"
 
 export default function App() {
   return (
-    <main className="wrapper">
-      <NavBar />
-      <Slider />
-      <About_Us />
-      <Contact />
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/BBayTravel" element={<Travel />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
