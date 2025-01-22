@@ -40,8 +40,12 @@ const PackageSlider = () => {
     };
 
     return (
-        <div>
+        <div id="packages-area">
             <div className="package-slider">
+            <div className='package-slider-header'>
+                <h2>Featured Destinations</h2>
+                <p>Explore our most popular destinations and start planning your next adventure.</p>    
+            </div>
                 <div className="item">
                     <div className="content">
                         <h3>Guangzhou</h3>

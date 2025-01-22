@@ -323,112 +323,175 @@ header .menu {
     animation-range: entry 0% cover 45%;
 }
 
-.Contact {
-  background-image: url(./assets/contact.JPG);  /* Peach background */
-  background-size: cover;
-  background-position: center;
-  padding: 80px 20px;
-  min-height: 50vh;
-  display: flex;
+.travel-contact {
+    background-color: #7d8491;
+    padding: 80px 20px;
+    min-height: 50vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
 }
 
-.Contact .content {
-  max-width: 800px;
-  width: 100%;
-  margin-left: 10%; 
-  
+.travel-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #7d8491 0%, #ffffff 100%);
+    opacity: 0.3;
+    z-index: 1;
 }
 
-.Contact .content .heading {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.travel-contact .content {
+    max-width: 800px;
+    width: 100%;
+    margin-left: 30%;
+    position: relative;
+    z-index: 2;
 }
 
-.Contact .content .heading h2 {
-  font-size: 50px;
-  font-weight: bold;
-  color: #0e0e0e;
-  margin: 0;
-  color: #f5eeee;
+.travel-contact .content .heading {
+    margin-left: 20%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.Contact .content .heading .decorative-line {
-  flex: .70;
-  height: 1px;
-  background-color: #f5eeee;
+.travel-contact .content .heading h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fbfbfb;
+    margin: 0;
 }
 
-.Contact .content p {
-  font-size: 18px;
-  color:  #f5eeee;
-  margin: 30px 0;
-  line-height: 1.6;
-  text-align: left;
+
+.travel-contact .content p {
+    font-size: 18px;
+    color: #fbfbfb;
+    margin: 30px 0;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 80%;
 }
 
-.Contact .content a {
-  color: #FF8C69;  /* Darker peach for links */
-  text-decoration: none;
-  transition: color 0.3s ease;
+.travel-contact .content a {
+    color: #e7ecd5;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.Contact .content a:hover {
-  color: #FF6347;  /* Even darker on hover */
+.travel-contact .content a:hover {
+    color: #ffffff;
 }
 
-.Contact .email-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 20px;
-  margin-top: 20px;
+.travel-contact .email-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin-top: 20px;
 }
 
-.Contact .email-link .icon {
-  font-size: 24px;
+.travel-contact .email-link .icon {
+    font-size: 24px;
 }
 
-.Contact .social-links {
+
+.social-links {
+display: flex;
+gap: 25px;
+}
+
+.social-links a {
+color: #ffffff;
+font-size: 24px;
+transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+color: #575757;
+}
+
+.travel-contact .social-links {
     display: flex;
     gap: 25px;
     margin-top: 20px;
-  }
-  
-  .Contact .social-links a {
-    color: #f5eeee;
+    margin-left: 28%;
+}
+
+.travel-contact .social-links a {
+    color: #ffffff;
     font-size: 24px;
     transition: color 0.3s ease;
-  }
-  
-  .Contact .social-links a:hover {
-    color: #b88373;
-  }
+}
 
-.Contact .social-links a,
-.Contact .content p,
-.Contact .content h2,
-.Contact .content .heading .decorative-line
+.travel-contact .social-links a:hover {
+    color: #575757;
+}
+
+.travel-contact .social-links a,
+.travel-contact .content p,
+.travel-contact .content h2
 {
     animation: appear 5s ease-in-out 1 forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
 
-
 /* Package Slider */
 
+.travel-body {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.package-slider-header {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #bfbfbf;
+    padding-top: 80px;
+}
+
+.package-slider-header h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #0e0f0e;
+    margin: 0;
+}
+
+.package-slider-header p {
+    font-size: 15px;
+    font-weight: light;
+    color: #0e0f0e;
+    width: 90%;
+    margin-left: 5%;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+.package-slider-header p,
+.package-slider-header h2
+{
+    animation: appear 5s ease-in-out 1 forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
 
 .package-slider {
     width: 100%;
-    height: 90vh;
+    height: auto;
+    min-height: 110vh;
     position: relative;
-    overflow: hidden;
-    /*background-color: #3f334d;*/
-    background-color: #7d8491;
+    overflow: visible;
+    background-color: #bfbfbf;
     perspective: 1000px;
+    padding-bottom: 100px;
 }
 
 
@@ -439,7 +502,8 @@ header .menu {
     text-align: justify;
     background-color: #fff;
     border-radius: 10px;
-    margin-top: 120px;
+    margin-top: 300px;
+    margin-bottom: 100px;
     padding: 20px;
     transition: 0.5s;
     left: calc(50% - 100px);
@@ -484,8 +548,8 @@ header .menu {
 
 #next, #prev {
     position: absolute;
-    top: 40%;
-    color: #e7ecd5;
+    top: 53%;
+    color: #000;
     background-color: transparent;
     border: none;
     font-size: xxx-large;
@@ -521,6 +585,27 @@ header .menu {
     z-index: 1;
 }
 
+.travel-hero .travel-hero-globe {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    opacity: 0.9;
+    transform: translate(-50%, -20%) rotate(0deg);  /* Added initial rotation state */
+    width: 101%;
+    height: 230%;
+    z-index: 51;
+    animation: globe-counter-rotate 80s linear infinite;
+}
+
+@keyframes globe-counter-rotate {
+    from {
+        transform: translate(-50%, -20%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -20%) rotate(-360deg);
+    }
+}
+
 .travel-hero h1, .travel-hero p {
     position: relative;
     z-index: 2;
@@ -539,10 +624,10 @@ header .menu {
     position: absolute;
     font-size: 4em;
     color: #000000;
-    left: 50%;
+    left: 50.5%;
     top: 80%;
     transform: translate(-50%, -50%);
-    z-index: 51;
+    z-index: 52;
     text-align: center;
     margin: 0;  
 
@@ -593,26 +678,7 @@ header .menu {
 
 /*lemon bg: #e7ecd5*/
 
-.thero-images::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    rotate: 300deg;
-    width: 100%;
-    height: 100%;
-    background: url('./assets/travelhero/globe1.png') center center/cover;
-    animation: counter-rotate 30s linear infinite;
-}
 
-@keyframes counter-rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-360deg);
-    }
-}
 
 
 .thero-images .item {
