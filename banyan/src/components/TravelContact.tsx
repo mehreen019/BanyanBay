@@ -10,7 +10,6 @@ const TravelContact = () => {
        <div className="content">
            <div className="heading">
                <h2>Contact Us</h2>
-               <div className="decorative-line"></div>
            </div>
            <p>Ready to start your journey? Get in touch with us for personalized travel planning and expert advice.</p>
             <div className="social-links">

@@ -329,19 +329,6 @@ header .menu {
     min-height: 50vh;
     display: flex;
     position: relative;
-    overflow: hidden;
-}
-
-.travel-contact::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #7d8491 0%, #ffffff 100%);
-    opacity: 0.3;
-    z-index: 1;
 }
 
 .travel-contact .content {
@@ -387,18 +374,6 @@ header .menu {
     color: #ffffff;
 }
 
-.travel-contact .email-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
-    margin-top: 20px;
-}
-
-.travel-contact .email-link .icon {
-    font-size: 24px;
-}
-
 
 .social-links {
 display: flex;
@@ -432,13 +407,27 @@ color: #575757;
     color: #575757;
 }
 
-.travel-contact .social-links a,
+.travel-contact .content .heading h2,
 .travel-contact .content p,
-.travel-contact .content h2
+.travel-contact .social-links a
 {
     animation: appear 5s ease-in-out 1 forwards;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 36%;
+}
+
+
+/* Stagger the animations */
+.travel-contact .content h2 {
+    animation-delay: 0.2s;
+}
+
+.travel-contact .content p {
+    animation-delay: 0.4s;
+}
+
+.travel-contact .social-links a {
+    animation-delay: 0.6s;
 }
 
 /* Package Slider */

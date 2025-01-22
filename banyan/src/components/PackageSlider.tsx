@@ -6,7 +6,7 @@ import pattaya from '../assets/travel/pattaya.jpg'
 import { useEffect, useState, useCallback } from 'react'
 
 const PackageSlider = () => {
-    const [active, setActive] = useState(3);
+    const [active, setActive] = useState(2);
 
     const loadShow = useCallback(() => {
         const items = document.querySelectorAll('.package-slider .item');

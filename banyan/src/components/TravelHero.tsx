@@ -5,6 +5,12 @@ import pokhara from '../assets/travelhero/pokhara.png'
 import kathmandu from '../assets/travelhero/kathmandu.png'
 import globe from '../assets/travelhero/file.png'
 
+declare module 'react' {
+    interface CSSProperties {
+        '--i'?: number;
+    }
+}
+
 const TravelHero = () => {
   return (
     <div id="home" className='travel-hero'>
