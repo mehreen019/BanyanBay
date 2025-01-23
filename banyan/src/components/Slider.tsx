@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 const IMAGES = [
     { url: img1, alt: "Slider One", headertxt: "Banyan Bay", btntxt: "Learn More", description: "Banyan Bay Limited is a women-led initiative, championing inclusivity and eco-friendly solutions to shape a better world. Our dynamic team is a mosaic of individuals, united by their unique talents—regardless of age, gender, race, social status or ability. We are setting our sights on a global stage - prioritizing productivity and groundbreaking innovation over traditional norms. Join us in redefining success and building a brighter, more inclusive future. Together,we grow.", theme: "dark" },
     /*{ url: img2, alt: "Slider Two", headertxt: "Our Story", btntxt: "Learn More" },*/
-    { url: img3, alt: "Slider Three", headertxt: "BBay Travel", btntxt: "Go to Website", description: "Get exclusive travel deals from BBAY Travel. We are offering travel packages, visa processing, hotel booking,  ticketing, transport and relevant services.", theme: "light" },
+    { url: img3, alt: "Slider Three", headertxt: "BBay Travel", btntxt: "Go to Website", description: "Get exclusive travel deals from BBay Travel. We are offering travel packages, visa processing, hotel booking,  ticketing, transport and relevant services.", theme: "light" },
   ]
 
 const Slider = () => {
@@ -42,7 +42,7 @@ const Slider = () => {
                             <p></p>
                             <h2>{image.headertxt}</h2>
                             <p>{image.description}</p>
-                            <button>{image.btntxt}</button>
+                            { index === 1 && <button>{image.btntxt}</button>}
                         </div>
                     </div>
                 ))}

@@ -12,19 +12,19 @@ const NavBar = () => {
         <ul className="menu">
             <li> <a className='nav-link' href="#home">Home</a> </li>
             <li className="dropdown">
-                <a className='nav-link' href="#about-us">Work with us</a>
+                <a className='nav-link' href="#about-us">Work With Us</a>
                 <ul className="dropdown-menu">
                     <li>
-                        <a className='nav-link'>Business</a>
+                        <a className='dropdown-link'>Business</a>
                         <span className="coming-soon">coming soon</span>
                     </li>
                     <li>
-                        <a className='nav-link'>Vacancies</a>
+                        <a className='dropdown-link'>Vacancies</a>
                         <span className="coming-soon">coming soon</span>
                     </li>
                 </ul>
             </li>
-            <li> <a className='nav-link' href="#contact-area">Contact</a> </li>
+            <li> <a className='nav-link' href="#contact-area">Contact Us</a> </li>
         </ul>
         <div className="search">
         <div className="social-links">
