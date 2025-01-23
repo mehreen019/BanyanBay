@@ -1,16 +1,43 @@
+import { FaFacebook } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
+import logo from '../assets/logo.png';
+
 const NavBar = () => {
   return (
     <header>
-        <div className="logo">BanyanBay</div>
+        <div className="logo">
+          <img src={logo} alt="BanyanBay" />
+        </div>
         <ul className="menu">
             <li> <a className='nav-link' href="#home">Home</a> </li>
-            <li> <a className='nav-link' href="#about-us">About</a> </li>
+            <li className="dropdown">
+                <a className='nav-link' href="#about-us">Work with us</a>
+                <ul className="dropdown-menu">
+                    <li>
+                        <a className='nav-link'>Business</a>
+                        <span className="coming-soon">coming soon</span>
+                    </li>
+                    <li>
+                        <a className='nav-link'>Vacancies</a>
+                        <span className="coming-soon">coming soon</span>
+                    </li>
+                </ul>
+            </li>
             <li> <a className='nav-link' href="#contact-area">Contact</a> </li>
         </ul>
         <div className="search">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
-            </svg>
+        <div className="social-links">
+            <a href="https://www.facebook.com/BanyanBayLtd" target='_blank'>
+                <FaFacebook className='text-white' size={28} />
+            </a>
+            <a href="https://www.instagram.com/banyanbayltd" target="_blank" >
+                <FaInstagram className='text-white' size={28} />
+            </a>
+            <a href="https://www.linkedin.com/company/banyan-bay-ltd/" target="_blank">
+                <FaLinkedin className='text-white' size={28} />
+            </a>
+          </div>
         </div>
     </header>
   )

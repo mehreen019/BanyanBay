@@ -1,13 +1,12 @@
-import img1 from "../assets/img1.jpg"
-import img2 from "../assets/img2.jpg"
+import img1 from "../assets/apuimg1.jpg"
 import img3 from "../assets/img3.jpg"
 import { useState, useEffect } from 'react'
 
 
 const IMAGES = [
-    { url: img1, alt: "Slider One", headertxt: "Banyan Bay", btntxt: "Learn More" },
-    { url: img2, alt: "Slider Two", headertxt: "Our Story", btntxt: "Learn More" },
-    { url: img3, alt: "Slider Three", headertxt: "Bbay Travel", btntxt: "Go to Website" },
+    { url: img1, alt: "Slider One", headertxt: "Banyan Bay", btntxt: "Learn More", description: "Banyan Bay Limited is a women-led initiative, championing inclusivity and eco-friendly solutions to shape a better world. Our dynamic team is a mosaic of individuals, united by their unique talents—regardless of age, gender, race, social status or ability. We are setting our sights on a global stage - prioritizing productivity and groundbreaking innovation over traditional norms. Join us in redefining success and building a brighter, more inclusive future. Together,we grow.", theme: "dark" },
+    /*{ url: img2, alt: "Slider Two", headertxt: "Our Story", btntxt: "Learn More" },*/
+    { url: img3, alt: "Slider Three", headertxt: "BBay Travel", btntxt: "Go to Website", description: "Get exclusive travel deals from BBAY Travel. We are offering travel packages, visa processing, hotel booking,  ticketing, transport and relevant services.", theme: "light" },
   ]
 
 const Slider = () => {
@@ -16,7 +15,7 @@ const Slider = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentIndex((prev) => (prev >= IMAGES.length - 1 ? 0 : prev + 1));
-        }, 5000); // 5 seconds
+        }, 8000); // 5 seconds
 
         return () => clearInterval(timer); // Cleanup on unmount
     }, [currentIndex]); // Reset timer when currentIndex changes
@@ -34,12 +33,15 @@ const Slider = () => {
         <div className='slider'>
             <div className='list'>
                 {IMAGES.map((image, index) => (
-                    <div key={index} className={`item ${index === currentIndex ? 'active' : ''}`}>
+                    <div 
+                        key={index} 
+                        className={`item ${index === currentIndex ? 'active' : ''} ${image.theme}`}
+                    >
                         <img src={image.url} alt={image.alt} />
                         <div className='content'>
-                            <p>design</p>
+                            <p></p>
                             <h2>{image.headertxt}</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                            <p>{image.description}</p>
                             <button>{image.btntxt}</button>
                         </div>
                     </div>
