@@ -3,7 +3,6 @@ import pattaya from '../assets/travelhero/pattaya.png'
 import bangkok from '../assets/travelhero/bangkok.png'
 import pokhara from '../assets/travelhero/pokhara.png'
 import kathmandu from '../assets/travelhero/kathmandu.png'
-import globe from '../assets/travelhero/file.png'
 
 declare module 'react' {
     interface CSSProperties {
@@ -14,9 +13,9 @@ declare module 'react' {
 const TravelHero = () => {
   return (
     <div id="home" className='travel-hero'>
-        <h1>Gets you goin'</h1>
-        <p>Lets Travel.</p>
-        <img className='travel-hero-globe' src={globe} alt='globe' />
+        <h1>BBay Travel</h1>
+        <h2>Gets you goin'</h2>
+        {/* <img className='travel-hero-globe' src={globe} alt='globe' /> */}
     <div className='thero-images'>
         <div className='item' style={{ '--i': 1 }}>
             <img src={guangzhou} alt='hero-image' />
