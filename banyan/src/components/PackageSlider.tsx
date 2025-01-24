@@ -19,10 +19,10 @@ const PackageSlider = () => {
                 element.style.zIndex = '1';
                 element.style.opacity = '1';
             } else {
-                element.style.transform = `translateX(${stt * 120}px) scale(${1 - Math.abs(stt) * 0.2}) rotateY(${stt * 15}deg)`;
+                element.style.transform = `translateX(${stt * 140}px) scale(${1 - Math.abs(stt) * 0.2}) rotateY(${stt * 15}deg)`;
                 element.style.zIndex = `${-Math.abs(stt)}`;
                 element.style.filter = 'blur(5px)';
-                element.style.opacity = Math.abs(stt) > 2 ? '0' : '0.4';
+                element.style.opacity = Math.abs(stt) > 2 ? '0' : '0.6';
             }
         });
     }, [active]);
@@ -43,20 +43,22 @@ const PackageSlider = () => {
         <div id="packages-area">
             <div className="package-slider">
             <div className='package-slider-header'>
-                <h2>Featured Destinations</h2>
+                <h2>Featured Packages</h2>
                 <p>Explore our most popular destinations and start planning your next adventure.</p>    
             </div>
                 <div className="item">
                     <div className="content">
                         <h3>Guangzhou</h3>
-                        <p>Coming Soon</p> 
+                        <p>3D 1N</p>
+                        <p>Kathmandu Valley Tour</p>
                     </div>
                     <img src={china} alt="china" />
                 </div>
                 <div className="item">
                     <div className="content">
                         <h3>Guangzhou</h3>
-                        <p>Coming Soon</p> 
+                        <p>3D 1N</p>
+                        <p>Kathmandu Valley Tour</p>
                     </div>
                     <img src={guangzhou} alt="guangzhou" />
                     
@@ -64,21 +66,24 @@ const PackageSlider = () => {
                 <div className="item">
                     <div className="content">
                         <h3>Kathmandu</h3>
-                        <p>Coming Soon</p> 
+                        <p>3D 1N</p>
+                        <p>Kathmandu Valley Tour</p>
                     </div>
                     <img src={kathmandu} alt="kathmandu" />
                 </div>
                 <div className="item">
                     <div className="content">
                         <h3>Pokhara</h3>
-                        <p>Coming Soon</p> 
+                        <p>3D 1N</p>
+                        <p>Kathmandu Valley Tour</p>
                     </div>
                     <img src={pokhara} alt="pokhara" />
                 </div>
                 <div className="item">
                     <div className="content">
                         <h3>Pattaya</h3>
-                        <p>Coming Soon</p> 
+                        <p>3D 1N</p>
+                        <p>Kathmandu Valley Tour</p>
                     </div>
                     <img src={pattaya} alt="pattaya" />
                 </div>

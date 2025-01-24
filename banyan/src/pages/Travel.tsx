@@ -1,3 +1,4 @@
+import VisaSlider from "../components/VisaSlider"
 import PackageSlider from "../components/PackageSlider"
 import TravelContact from "../components/TravelContact"
 import TravelHero from "../components/TravelHero"
@@ -9,6 +10,7 @@ const Travel = () => {
       <TravelNavBar />
       <TravelHero />
       <PackageSlider />
+      <VisaSlider />
       <TravelContact />
     </div>
   )

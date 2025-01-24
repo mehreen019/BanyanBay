@@ -12,11 +12,12 @@ const TravelContact = () => {
                <h2>Contact Us</h2>
            </div>
            <p>Ready to start your journey? Get in touch with us for personalized travel planning and expert advice.</p>
+           <p>Email: banyanbaylimited@gmail.com</p>
             <div className="social-links">
-            <a href="mailto:travel@example.com">
+            <a href="mailto:banyanbaylimited@gmail.com">
                 <FaEnvelope className='text-white' size={28} />
             </a>
-            <a href="https://www.facebook.com/BanyanBayLtd" target='_blank'>
+            <a href="https://www.facebook.com/BBayTravel" target='_blank'>
                 <FaFacebook className='text-white' size={28} />
             </a>
             <a href="https://www.instagram.com/banyanbayltd" target="_blank" >

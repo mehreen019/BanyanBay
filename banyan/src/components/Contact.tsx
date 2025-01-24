@@ -14,8 +14,11 @@ const Contact = () => {
           <p>
             Let's connect! You can find us on any of these platforms.
           </p>
+          <p>
+            Email: banyanbaylimited@gmail.com
+          </p>
           <div className="social-links">
-            <a href="mailto:travel@example.com">
+            <a href="mailto:banyanbaylimited@gmail.com">
                 <FaEnvelope className='text-white' size={28} />
             </a>
             <a href="https://www.facebook.com/BanyanBayLtd" target='_blank'>
