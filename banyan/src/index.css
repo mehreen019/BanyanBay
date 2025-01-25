@@ -462,7 +462,7 @@ header .social-links {
     background-size: cover;
     background-position: center;
     padding: 80px 20px;
-    min-height: 50vh;
+    min-height: 70vh;
     display: flex;
     position: relative;
 }
@@ -484,6 +484,7 @@ header .social-links {
     margin-left: 5%; 
     position: relative;
     z-index: 2;
+    margin-top: 6%;
 }
   
 .Contact .content .heading {
@@ -855,16 +856,33 @@ color: #575757;
     font-size: 4em;
     color: #000000;
     left: 50.5%;
-    top: 75%;
+    top: 65%;
     transform: translate(-50%, -50%);
     z-index: 52;
     text-align: center;
     margin: 0;  
 }
 
-@media screen and (max-width: 650px) {
+.travel-hero h2 {
+    font-family: 'Playwrite IN', sans-serif;
+    position: absolute;
+    font-size: 2em;
+    color: #000000;
+    left: 50.5%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 52;
+    text-align: center;
+    margin: 0;  
+}
+
+
+@media screen and (max-width: 950px) {
     .travel-hero h1 {
         font-size: 40px;
+    }
+    .travel-hero h2 {
+        font-size: 1.5em;
     }
 }
 
