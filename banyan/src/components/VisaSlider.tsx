@@ -96,10 +96,10 @@ const VisaSlider = () => {
         </div>
         <div className='visa-buttons'>
             <button className='prev' onClick={handlePrev}>
-                <i className="fa-solid fa-angle-left">{'<'}</i>
+                {'<'}
             </button>
             <button className='next' onClick={handleNext}>
-                <i className="fa-solid fa-angle-right">{'>'}</i>
+                {'>'}
             </button>
         </div>
     </div>

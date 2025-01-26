@@ -1,27 +1,17 @@
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6"
-import bbtlogo from "../assets/bbtlogo.png"
+import bbllogo from "../assets/bbllogo.png"
 
-const TravelNavBar = () => {
+const CareerNavBar = () => {
     return (
       <header>
-          <div className="logo-travel">
-            <img src={bbtlogo} alt="BanyanBay" />    
+          <div className="logo">
+            <img src={bbllogo} alt="BanyanBay" />    
           </div>
           <ul className="menu">
-              <li> <a className='nav-link' href="#home">Home</a> </li>
+              <li> <a className='nav-link' href="/">Home</a> </li>
+              <li> <a className='nav-link' href="/BbayTravel">Travel</a> </li>
               <li className="dropdown">
-                <a className='nav-link'>  Services</a>
-                <ul className="dropdown-menu">
-                    <li>
-                        <a className='dropdown-link' href="#packages-area">Packages</a>
-                    </li>
-                    <li>
-                        <a className='dropdown-link' href="#visa-area">Visa</a>
-                    </li>
-                </ul>
-              </li>
-              <li className="dropdown">
-                <a className='nav-link' href="/Careers">Work With Us</a>
+                <a className='nav-link' href="#about-us">Work With Us</a>
                 <ul className="dropdown-menu">
                     <li>
                         <a className='dropdown-link'>Business</a>
@@ -32,7 +22,6 @@ const TravelNavBar = () => {
                     </li>
                 </ul>
               </li>
-              <li> <a className='nav-link' href="#contact-area">Contact</a> </li>
           </ul>
 
           <div className="social-links">
@@ -50,4 +39,4 @@ const TravelNavBar = () => {
     )
   }
   
-  export default TravelNavBar
+  export default CareerNavBar

@@ -1,26 +1,25 @@
 import { FaFacebook } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
-import logo from '../assets/logo.png';
+import bbllogo from '../assets/bbllogo.png';
 
 const NavBar = () => {
   return (
     <header>
         <div className="logo">
-          <img src={logo} alt="BanyanBay" />
+          <img src={bbllogo} alt="BanyanBay" />
         </div>
         <ul className="menu">
             <li> <a className='nav-link' href="#home">Home</a> </li>
             <li className="dropdown">
-                <a className='nav-link' href="#about-us">Work With Us</a>
+                <a className='nav-link' href="/Careers">Work With Us</a>
                 <ul className="dropdown-menu">
                     <li>
                         <a className='dropdown-link'>Business</a>
                         <span className="coming-soon">coming soon</span>
                     </li>
                     <li>
-                        <a className='dropdown-link'>Vacancies</a>
-                        <span className="coming-soon">coming soon</span>
+                        <a className='dropdown-link' href="/Careers">Vacancies</a>
                     </li>
                 </ul>
             </li>

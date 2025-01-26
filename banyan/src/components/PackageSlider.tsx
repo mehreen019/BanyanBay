@@ -19,7 +19,7 @@ const PackageSlider = () => {
                 element.style.zIndex = '1';
                 element.style.opacity = '1';
             } else {
-                element.style.transform = `translateX(${stt * 140}px) scale(${1 - Math.abs(stt) * 0.2}) rotateY(${stt * 15}deg)`;
+                element.style.transform = `translateX(${stt * 180}px) scale(${1 - Math.abs(stt) * 0.2}) rotateY(${stt * 15}deg)`;
                 element.style.zIndex = `${-Math.abs(stt)}`;
                 element.style.filter = 'blur(5px)';
                 element.style.opacity = Math.abs(stt) > 2 ? '0' : '0.6';
