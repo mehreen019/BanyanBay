@@ -1061,25 +1061,29 @@ color: #575757;
 }
 
 .visa-item:nth-child(3){
-    left:55%;
+    top: 80%;
+    left:35%;
 }
 
 .visa-item:nth-child(4){
-    left:calc(55% + 180px);
+    top: 80%;
+    left:calc(35% + 180px);
 }
 
 .visa-item:nth-child(5){
-    left:calc(55% + 360px);
+    top: 80%;
+    left:calc(35% + 360px);
 }
 
 .visa-item:nth-child(n+6){
+    top: 80%;
     left:calc(55% + 540px);
     opacity: 0;
 }
 
 .visa-item .visa-content {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 100px;
     width: 300px;
     transform: translate(0, -50%);
@@ -1134,12 +1138,13 @@ color: #575757;
 
 .visa-title {
     position: absolute;
-    top: 60px;
-    left: 50%;
+    top: 22%;
+    left: 82%;
     transform: translateX(-50%);
     z-index: 60;
     margin: 0;
-    font-size: 50px;
+    text-transform: uppercase;
+    font-size: 65px;
     font-weight: bold;
     color: #ffffff;
     text-shadow: 0px 0px 10px #101010;
@@ -1166,16 +1171,16 @@ color: #575757;
 
 .visa-buttons {
     position: absolute;
-    bottom: 30px;
+    bottom: 110px;
     z-index: 60;
     text-align: center;
     width: 100%;
-    left: 50%;
+    left: 52%;
     transform: translateX(-50%);
 }
 
 .visa-buttons button {
-    background-color: #eee5;
+    background-color: rgba(238, 238, 238, 0.79);
     border: none;
     font-family: monospace;
     font-size: x-large;
@@ -1183,9 +1188,9 @@ color: #575757;
     width: 40px;
     height: 40px;
     border-radius: 5px;
-    color: #eee;
+    color: #7a7a7a;
     transition: 0.5s;
-    margin: 0 10px;
+    margin: 0 330px;
 }
 
 .visa-buttons button:hover {

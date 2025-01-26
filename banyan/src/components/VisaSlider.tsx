@@ -27,7 +27,7 @@ const VisaSlider = () => {
     }
     
   return (
-    <div className="visa-container">
+    <div id="visa-area" className="visa-container">
         <div className="visa-title">Our Visa Services</div>
         <div id="visa-slider">
             <div className="visa-item" style={{backgroundImage: `url(${malaysia})`}}>
