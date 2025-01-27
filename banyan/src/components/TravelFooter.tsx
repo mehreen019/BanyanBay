@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Youtube, Linkedin, Instagram } from 'lucide-react';
+import { Facebook, Linkedin, Instagram } from 'lucide-react';
 import '../Footer.css';
 
 const TravelFooter: React.FC = () => {
