@@ -103,7 +103,7 @@ const VisaSlider = () => {
                         <div className="visa-content">
                             <div className="name">{item.name}</div>
                             <div className="visa-type">{item.type}</div>
-                            <div className="price">Starting from {item.price}</div>
+                            <div className="price">{item.price}</div>
                         </div>
                     </div>
                 ))}
