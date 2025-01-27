@@ -70,6 +70,8 @@ const VisaSlider = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}
+
+            id="visa-area"
         >
             <div className="visa-title">Our Visa Services</div>
             {selectedItem !== null && (
