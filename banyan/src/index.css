@@ -46,7 +46,7 @@ header .logo-travel{
     display: flex;
     justify-content: flex-start;
     margin-left: -25px;
-    margin-top: 0px;
+    margin-top: 15px;
 }
 
 header .logo-travel img {
@@ -62,7 +62,7 @@ header .menu {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
-    margin-top: 23px;
+    margin-top: 25px;
     font-weight: 500;
     font-family: 'Karla', sans-serif;
 }
@@ -75,9 +75,22 @@ header .social-links {
     margin-left: 20px;
 }
 
+header .social-links-b {
+    display: flex;
+    gap: 25px;
+    margin-top: 33px;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
 .nav-link {
     text-decoration: none;
     color: #ffffff;
+}
+
+.nav-link-b {
+    text-decoration: none;
+    color: #0a0a0a;
 }
 
 .dropdown .dropdown-menu{
@@ -145,8 +158,8 @@ header .social-links {
 
 /* slider */
 .slider {
-    height: 100vh;
-    margin-top: -50px;
+    height: 90vh;
+    margin-top: 2%;
     position: relative;
 }
 
@@ -349,7 +362,7 @@ header .social-links {
 .tscroll p {
     font-size: small;
     margin: 0;
-    color:  #000000;
+    color:  #ffffff;
 }
 
 .tscroll p:nth-child(2) {
@@ -361,7 +374,7 @@ header .social-links {
 .mouse {
     width: 25px;
     height: 40px;
-    border: 2px solid #fff;
+    border: 2px solid #ffffff;
     border-radius: 20px;
     position: relative;
 }
@@ -382,7 +395,7 @@ header .social-links {
 .tmouse {
     width: 25px;
     height: 40px;
-    border: 2px solid #000000;
+    border: 2px solid #ffffff;
     border-radius: 20px;
     position: relative;
 }
@@ -394,7 +407,7 @@ header .social-links {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background: #000000;
+    background: #ffffff;
     border-radius: 2px;
     top: 8px;
     animation: scroll 1.3s infinite;
@@ -665,6 +678,21 @@ transition: color 0.3s ease;
 .social-links a:hover {
 color: #575757;
 }
+
+.social-links-b {
+    display: flex;
+    gap: 25px;
+    }
+
+.social-links-b a {
+    color: #000000;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    }
+    
+    .social-links-b a:hover {
+    color: #575757;
+    }
 
 .travel-contact .social-links {
     display: flex;
@@ -1403,6 +1431,8 @@ color: #575757;
     bottom: 20px;
     color: #fff;
     opacity: 0;
+    left:10px;
+    right:10px;
     transform: translateY(20px);
     transition: all 0.3s ease;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -1414,6 +1444,7 @@ color: #575757;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 5px;
+    left: 50px;
 }
 
 .visa-item .visa-type {
