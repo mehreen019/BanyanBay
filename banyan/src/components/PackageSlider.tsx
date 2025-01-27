@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback, useRef } from 'react'
 import china from '../assets/travel/china.jpg'
-import guangzhou from '../assets/travel/guangzhou.jpg'
+import bangkok from '../assets/travel/bangkok.jpg'
 import kathmandu from '../assets/travel/kathmandu.jpg'
 import pokhara from '../assets/travel/pokhara.jpg'
 import pattaya from '../assets/travel/pattaya.jpg'
@@ -103,41 +103,45 @@ const PackageSlider = () => {
                 </div>
                 <div className="item">
                     <div className="content">
-                        <h3>Guangzhou</h3>
-                        <p>3D 1N</p>
-                        <p>Kathmandu Valley Tour</p>
+                        <h3>China</h3>
+                        <p>Guangzhou (Canton fair)</p>
+                        <p>9D8N Business Trip</p>
                     </div>
                     <img src={china} alt="china" />
                 </div>
                 <div className="item">
                     <div className="content">
-                        <h3>Guangzhou</h3>
-                        <p>3D 1N</p>
-                        <p>Kathmandu Valley Tour</p>
+                        <h3>Thailand</h3>
+                        <p>Package 01</p>
+                        <p>Bangkok - Pattaya </p>
+                        <p>5D4N</p>
                     </div>
-                    <img src={guangzhou} alt="guangzhou" />
+                    <img src={bangkok} alt="bangkok" />
                 </div>
                 <div className="item">
                     <div className="content">
-                        <h3>Kathmandu</h3>
-                        <p>3D 1N</p>
-                        <p>Kathmandu Valley Tour</p>
+                        <h3>Nepal</h3>
+                        <p>Package 01</p>
+                        <p>Nagarkot & Kathmandu </p>
+                        <p>4D3N</p>
                     </div>
                     <img src={kathmandu} alt="kathmandu" />
                 </div>
                 <div className="item">
                     <div className="content">
-                        <h3>Pokhara</h3>
-                        <p>3D 1N</p>
-                        <p>Kathmandu Valley Tour</p>
+                        <h3>Nepal</h3>
+                        <p>Package 02</p>
+                        <p>Nagarkot, Kathmandu & Pokhara</p>
+                        <p>5D4N</p>
                     </div>
                     <img src={pokhara} alt="pokhara" />
                 </div>
                 <div className="item">
                     <div className="content">
-                        <h3>Pattaya</h3>
-                        <p>3D 1N</p>
-                        <p>Kathmandu Valley Tour</p>
+                    <h3>Thailand</h3>
+                        <p>Package 02</p>
+                        <p>Pattaya </p>
+                        <p>4D3N</p>
                     </div>
                     <img src={pattaya} alt="pattaya" />
                 </div>
