@@ -51,6 +51,13 @@ const TravelHero = () => {
             <img src={kathmandu} alt='hero-image' />
         </div>
     </div>
+    <div className='tscroll'>
+                <div>
+                    <p>Scroll Down</p>
+                    <p>To Discover More</p>
+                </div> 
+                <div className="tmouse"></div>
+    </div>
     </div>
   )
 }

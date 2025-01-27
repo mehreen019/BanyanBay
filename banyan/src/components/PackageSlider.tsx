@@ -1,12 +1,17 @@
+import { useEffect, useState, useCallback, useRef } from 'react'
 import china from '../assets/travel/china.jpg'
 import guangzhou from '../assets/travel/guangzhou.jpg'
 import kathmandu from '../assets/travel/kathmandu.jpg'
 import pokhara from '../assets/travel/pokhara.jpg'
-import pattaya from '../assets/travel/pattaya.jpg'  
-import { useEffect, useState, useCallback } from 'react'
+import pattaya from '../assets/travel/pattaya.jpg'
 
 const PackageSlider = () => {
     const [active, setActive] = useState(2);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
+    const sliderRef = useRef<HTMLDivElement>(null);
+    const dragThreshold = 50; // Minimum drag distance to trigger slide change
 
     const loadShow = useCallback(() => {
         const items = document.querySelectorAll('.package-slider .item');
@@ -32,20 +37,70 @@ const PackageSlider = () => {
     }, [active, loadShow]);
 
     const handleNext = () => {
-        setActive(prev => (prev + 1) % 5); // Assuming 5 items
+        setActive(prev => (prev + 1) % 5);
     };
 
     const handlePrev = () => {
-        setActive(prev => (prev - 1 + 5) % 5); // Assuming 5 items
+        setActive(prev => (prev - 1 + 5) % 5);
+    };
+
+    const handleMouseDown = (e: React.MouseEvent) => {
+        setIsDragging(true);
+        setStartX(e.pageX - (sliderRef.current?.offsetLeft || 0));
+        setScrollLeft(0);
+    };
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setIsDragging(true);
+        setStartX(e.touches[0].pageX - (sliderRef.current?.offsetLeft || 0));
+        setScrollLeft(0);
+    };
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+        if (Math.abs(scrollLeft) > dragThreshold) {
+            if (scrollLeft > 0) {
+                handlePrev();
+            } else {
+                handleNext();
+            }
+        }
+    };
+
+    const handleTouchEnd = handleMouseUp;
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - (sliderRef.current?.offsetLeft || 0);
+        const walk = x - startX;
+        setScrollLeft(walk);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        if (!isDragging) return;
+        const x = e.touches[0].pageX - (sliderRef.current?.offsetLeft || 0);
+        const walk = x - startX;
+        setScrollLeft(walk);
     };
 
     return (
         <div id="packages-area">
-            <div className="package-slider">
-            <div className='package-slider-header'>
-                <h2>Featured Packages</h2>
-                <p>Explore our most popular destinations and start planning your next adventure.</p>    
-            </div>
+            <div 
+                className="package-slider"
+                ref={sliderRef}
+                onMouseDown={handleMouseDown}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseUp}
+                onMouseMove={handleMouseMove}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+                onTouchMove={handleTouchMove}
+            >
+                <div className='package-slider-header'>
+                    <h2>Featured Packages</h2>
+                    <p>Explore our most popular destinations and start planning your next adventure.</p>    
+                </div>
                 <div className="item">
                     <div className="content">
                         <h3>Guangzhou</h3>
@@ -61,7 +116,6 @@ const PackageSlider = () => {
                         <p>Kathmandu Valley Tour</p>
                     </div>
                     <img src={guangzhou} alt="guangzhou" />
-                    
                 </div>
                 <div className="item">
                     <div className="content">

@@ -8,7 +8,7 @@ const TravelNavBar = () => {
             <img src={bbtlogo} alt="BanyanBay" />    
           </div>
           <ul className="menu">
-              <li> <a className='nav-link' href="#home">Home</a> </li>
+              <li> <a className='nav-link' href="/">Home</a> </li>
               <li className="dropdown">
                 <a className='nav-link'>  Services</a>
                 <ul className="dropdown-menu">
@@ -28,7 +28,8 @@ const TravelNavBar = () => {
                         <span className="coming-soon">coming soon</span>
                     </li>
                     <li>
-                        <a className='dropdown-link' href="/Careers">Vacancies</a>
+                        <a className='dropdown-link'>Careers</a>
+                        <span className="coming-soon">coming soon</span>
                     </li>
                 </ul>
               </li>
