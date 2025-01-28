@@ -8,6 +8,7 @@ import umrah from '../assets/visa/umrah.jpg';
 import hongkong from '../assets/visa/hong-kong.jpg';
 import china1 from '../assets/visa/china1.jpg';
 import china2 from '../assets/visa/china2.jpg';
+import LazyLoad from 'react-lazyload';
 
 const VisaSlider = () => {
     const [selectedItem, setSelectedItem] = useState<number | null>(null);
@@ -90,22 +91,24 @@ const VisaSlider = () => {
                 onMouseLeave={handleMouseUp}
             >
                 {visaItems.map((item, index) => (
-                    <div
-                        key={`${item.name}-${item.type}`}
-                        className={`visa-item ${
-                            selectedItem === index ? 'active' : ''
-                        }`}
-                        style={{
-                            backgroundImage: `url(${item.image})`,
-                        }}
-                        onClick={() => handleItemClick(index)}
-                    >
-                        <div className="visa-content">
-                            <div className="name">{item.name}</div>
-                            <div className="visa-type">{item.type}</div>
-                            <div className="price">{item.price}</div>
+                    <LazyLoad key={`${item.name}-${item.type}`} height={200} offset={100}>
+                        <div
+                            className={`visa-item ${selectedItem === index ? 'active' : ''}`}
+                            style={{
+                                backgroundImage: `url(${item.image})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                minHeight: '200px',
+                            }}
+                            onClick={() => handleItemClick(index)}
+                        >
+                            <div className="visa-content">
+                                <div className="name">{item.name}</div>
+                                <div className="visa-type">{item.type}</div>
+                                <div className="price">{item.price}</div>
+                            </div>
                         </div>
-                    </div>
+                    </LazyLoad>
                 ))}
             </div>
         </div>

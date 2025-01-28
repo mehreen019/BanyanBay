@@ -1,9 +1,13 @@
-import { useEffect, useState, useCallback, useRef } from 'react'
+import { useCallback, useRef } from 'react'
 import china from '../assets/travel/china.jpg'
 import bangkok from '../assets/travel/bangkok.jpg'
 import kathmandu from '../assets/travel/kathmandu.jpg'
 import pokhara from '../assets/travel/pokhara.jpg'
 import pattaya from '../assets/travel/pattaya.jpg'
+import LazyLoad from 'react-lazyload'
+
+import React, { useEffect, useState } from 'react';
+
 
 const PackageSlider = () => {
     const [active, setActive] = useState(2);
@@ -13,8 +17,33 @@ const PackageSlider = () => {
     const sliderRef = useRef<HTMLDivElement>(null);
     const dragThreshold = 50; // Minimum drag distance to trigger slide change
 
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+        
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // Function to determine the multiplier based on screen width
+    const getTranslateMultiplier = () => {
+        if (windowWidth >= 1200) return 180;
+        if (windowWidth >= 768) return 140;
+        return 90;
+    };
+
+    const translateMultiplier = getTranslateMultiplier();
+
+
     const loadShow = useCallback(() => {
         const items = document.querySelectorAll('.package-slider .item');
+
+        const maxVisibleOffset = windowWidth < 468 ? 1 : 2;
+        
         items.forEach((item, index) => {
             const element = item as HTMLElement;
             const stt = index - active;
@@ -24,10 +53,14 @@ const PackageSlider = () => {
                 element.style.zIndex = '1';
                 element.style.opacity = '1';
             } else {
-                element.style.transform = `translateX(${stt * 180}px) scale(${1 - Math.abs(stt) * 0.2}) rotateY(${stt * 15}deg)`;
+                element.style.transform = `translateX(${stt * translateMultiplier}px) scale(${1 - Math.abs(stt) * 0.2}) rotateY(${stt * 15}deg)`;
                 element.style.zIndex = `${-Math.abs(stt)}`;
                 element.style.filter = 'blur(5px)';
-                element.style.opacity = Math.abs(stt) > 2 ? '0' : '0.6';
+                if (windowWidth < 468) {
+                    element.style.opacity = Math.abs(stt) > maxVisibleOffset ? '0' : '0.6';
+                } else {
+                    element.style.opacity = Math.abs(stt) > maxVisibleOffset ? '0' : '0.6';
+                }
             }
         });
     }, [active]);
@@ -107,7 +140,9 @@ const PackageSlider = () => {
                         <p>Guangzhou (Canton fair)</p>
                         <p>9D8N Business Trip</p>
                     </div>
-                    <img src={china} alt="china" />
+                    <LazyLoad>
+                        <img src={china} alt="china" />
+                    </LazyLoad>
                 </div>
                 <div className="item">
                     <div className="content">
@@ -116,7 +151,9 @@ const PackageSlider = () => {
                         <p>Bangkok - Pattaya </p>
                         <p>5D4N</p>
                     </div>
-                    <img src={bangkok} alt="bangkok" />
+                    <LazyLoad>
+                        <img src={bangkok} alt="bangkok" />
+                    </LazyLoad>
                 </div>
                 <div className="item">
                     <div className="content">
@@ -125,7 +162,9 @@ const PackageSlider = () => {
                         <p>Nagarkot & Kathmandu </p>
                         <p>4D3N</p>
                     </div>
-                    <img src={kathmandu} alt="kathmandu" />
+                    <LazyLoad>
+                        <img src={kathmandu} alt="kathmandu" />
+                    </LazyLoad>
                 </div>
                 <div className="item">
                     <div className="content">
@@ -134,7 +173,9 @@ const PackageSlider = () => {
                         <p>Nagarkot, Kathmandu & Pokhara</p>
                         <p>5D4N</p>
                     </div>
-                    <img src={pokhara} alt="pokhara" />
+                    <LazyLoad>
+                        <img src={pokhara} alt="pokhara" />
+                    </LazyLoad>
                 </div>
                 <div className="item">
                     <div className="content">
@@ -143,7 +184,9 @@ const PackageSlider = () => {
                         <p>Pattaya </p>
                         <p>4D3N</p>
                     </div>
-                    <img src={pattaya} alt="pattaya" />
+                    <LazyLoad>
+                        <img src={pattaya} alt="pattaya" />
+                    </LazyLoad>
                 </div>
                 
                 <button id="prev" onClick={handlePrev}>{'<'}</button>
