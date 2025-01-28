@@ -18,15 +18,15 @@ const VisaSlider = () => {
     const [scrollLeft, setScrollLeft] = useState<number>(0);
 
     const visaItems = [
-        { name: 'Malaysia', type: 'E-visa', price: '5500BDT', image: malaysia },
-        { name: 'Singapore', type: 'E-visa', price: '6500BDT', image: singapore },
+        { name: 'China', type: 'Tourist visa', price: 'Starting From 9000BDT', image: china2 },
         { name: 'Thailand', type: 'E-visa', price: '9000BDT', image: thailand },
         { name: 'Sri Lanka', type: 'E-visa', price: '5000BDT', image: srilanka },
         { name: 'Turkey', type: 'E-visa', price: '9700BDT', image: turkey },
         { name: 'Umrah', type: 'E-visa', price: '21000BDT', image: umrah },
         { name: 'Hong Kong', type: 'E-visa', price: '11000BDT', image: hongkong },
+        { name: 'Malaysia', type: 'E-visa', price: '5500BDT', image: malaysia },
+        { name: 'Singapore', type: 'E-visa', price: '6500BDT', image: singapore },
         { name: 'China', type: 'Business visa', price: '37000BDT', image: china1 },
-        { name: 'China', type: 'Tourist visa', price: 'Starting From 9000BDT', image: china2 },
     ];
 
     const handleMouseDown = (e: ReactMouseEvent<HTMLDivElement>): void => {

@@ -42,7 +42,7 @@ const Slider = () => {
                             <p></p>
                             <h2>{image.headertxt}</h2>
                             <p>{image.description}</p>
-                            { index === 1 && <button onClick={() => window.location.href = '/BbayTravel'}>{image.btntxt}</button>}
+                            { index === 1 && <button onClick={() => window.location.href = '/BBayTravel'}>{image.btntxt}</button>}
                         </div>
                     </div>
                 ))}

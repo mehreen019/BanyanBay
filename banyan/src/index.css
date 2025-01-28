@@ -1316,12 +1316,12 @@ color: #575757;
 
 
 #visa-slider {
-    width: 100%;
+    width: 80%;
     position: absolute;
     bottom: 0;
     left: 10px;
     right:15px;
-    transform: translateX(8%);
+    transform: translateX(10%);
     height: 250px;
     display: flex;
     gap: 20px;
@@ -1355,9 +1355,20 @@ color: #575757;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.5s ease;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
+  
+}
+
+.visa-container .visa-item:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.427);
+    backdrop-filter: blur(0.1px);
     z-index: 50;
+    border-radius: 20px;
 }
 
 .visa-item.active {
@@ -1377,10 +1388,7 @@ color: #575757;
     transition: all 0.3s ease;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     opacity: 1;
-    animation: appear 5s ease-in-out 1 forwards;
-    animation-timeline: view();
     border-radius: 10px;
-    animation-range: entry 0% cover 40%;
     background-color: rgba(113, 113, 113, 0.411);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
     z-index: 50;
@@ -1418,7 +1426,9 @@ color: #575757;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     opacity: 1;
     transform: translateY(0);
+    z-index: 60;
 }
+
 
 .visa-item .name {
     font-size: 24px;
@@ -1434,7 +1444,6 @@ color: #575757;
 
 .visa-item .price {
     font-size: 14px;
-    opacity: 0.8;
 }
 
 .visa-title {
@@ -1455,6 +1464,31 @@ color: #575757;
 
 
 /* Add these media queries at the end of your CSS file */
+
+
+@media screen and (min-width: 1600px) {
+    .travel-hero::after{
+        top: 62%;
+        left: -15%;
+        width: 130%;
+        height: 130%;
+    }
+
+    .thero-images{
+        bottom: -8%;
+        width: 1700px;
+        height: 1700px;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1600px) {
+
+    .thero-images{
+        bottom: -6%;
+        width: 1600px;
+        height: 1600px;
+    }
+}
 
 @media screen and (max-width: 1024px) {
     
@@ -1575,7 +1609,7 @@ color: #575757;
     }
 
     header .logo-travel img{
-       margin-top: 0px;
+       margin-top: 15px;
     }
 
     header .logo-travel{
@@ -1653,6 +1687,32 @@ color: #575757;
 
 
 
+@media screen and (max-height: 750px) and (max-width: 824px) {
+
+    
+    .travel-hero::after{
+        top: 54%;
+        left: -25%;
+        width: 150%;
+        height: 150%;
+    }
+
+    .thero-images{
+        bottom: -22%;
+    }
+
+    .package-slider .item{
+        width: 180px;
+        height: 40vh;
+    }
+
+    .package-slider .item{
+        top: -6%;
+    }
+
+    
+}
+
 @media screen and (min-height: 900px) and (max-width: 824px) {
 
     header {
@@ -1667,6 +1727,7 @@ color: #575757;
 
     .travel-hero::after{
         top: 54%;
+
     }
 
 
@@ -1719,9 +1780,13 @@ color: #575757;
     .arrows {
         top: 50%;
     }
+
+    #visa-slider{
+        transform: translateX(6%);
+    }
 }
 
-@media screen and (min-height: 700px) and (max-width: 615px) {
+@media screen and (min-height: 700px) and (max-width: 635px) {
 
     header {
         width: 80%;
@@ -1809,6 +1874,10 @@ color: #575757;
     .arrows {
         top: 35%;
     }
+
+    #visa-slider{
+        transform: translateX(5%);
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1859,7 +1928,7 @@ color: #575757;
     }
     
     .travel-hero::after{
-        top: 36%;
+        top: 35%;
     }
     
     .travel-hero h1 {
@@ -1884,6 +1953,10 @@ color: #575757;
 
     .package-slider{
         max-width: 100vw;
+    }
+
+    .package-slider .item{
+        top:-8%;
     }
 
     .package-slider-header h2{
@@ -1940,8 +2013,12 @@ color: #575757;
         font-size: 12px;
     }
 
+    .travel-hero::after{
+        top: 36%;
+    }
+
     .travel-hero h2 {
-        top: 63vh;
+        top: 64vh;
     }
 
     .thero-images {
@@ -1953,6 +2030,23 @@ color: #575757;
         top: 30%;
     }
 
+    #visa-slider{
+        transform: translateX(3%);
+    }
+
+}
+
+@media screen and (max-width: 376px) {
+
+    .travel-hero::after{
+        top: 31%;
+    }
+
+    .travel-hero h2 {
+        top: 62vh;
+    }
+
+    
 }
 
 @media screen and (max-height: 600px) {
