@@ -1477,7 +1477,7 @@ color: #575757;
 .visa-selected-content .type,
 .visa-selected-content .price
 {
-    animation: appear 5s ease-in-out 1 forwards;
+    animation: appear 2s ease-in-out 1 forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
