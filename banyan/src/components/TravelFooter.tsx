@@ -16,7 +16,7 @@ const TravelFooter: React.FC = () => {
           <div className="social-icons">
             <a href="https://www.facebook.com/BBayTravel" aria-label="Facebook"><Facebook size={24} /></a>
             <a href="https://www.linkedin.com/company/banyan-bay-ltd/" aria-label="LinkedIn"><Linkedin size={24} /></a>
-            <a href="https://www.instagram.com/banyanbayltd" aria-label="Instagram"><Instagram size={24} /></a>
+            <a href="https://www.instagram.com/bbaytravel" aria-label="Instagram"><Instagram size={24} /></a>
           </div>
         </div>
       </div>
