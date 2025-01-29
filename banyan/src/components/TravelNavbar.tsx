@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6"
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa6"
 import bbtlogo from "../assets/bbtlogo.png"
 
 const TravelNavBar = () => {
@@ -45,6 +45,9 @@ const TravelNavBar = () => {
             </a>
             <a href="https://www.linkedin.com/company/banyan-bay-ltd/" target="_blank">
                 <FaLinkedin className='text-white' size={28} />
+            </a>
+            <a href='https://wa.me/+8801335086978' target="_blank">
+                <FaWhatsapp size={28} />
             </a>
           </div>
       </header>

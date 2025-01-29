@@ -13,6 +13,7 @@ declare module 'react' {
 
 const TravelHero = () => {
   return (
+    <div className='travel-hero-container'>
     <div id="home" className='travel-hero'>
         <h1>BBay Travel</h1>
         <h2>
@@ -72,6 +73,7 @@ const TravelHero = () => {
                     <p>To Discover More</p>
                 </div> 
                 <div className="tmouse"></div>
+    </div>
     </div>
     </div>
   )

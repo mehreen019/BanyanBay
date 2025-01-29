@@ -83,6 +83,11 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.8rem;
   }
+
+  .whatsapp-icon{
+    top:-17px;
+    position: relative;
+  }
   
   @media (max-width: 768px) {
     .footer-content {

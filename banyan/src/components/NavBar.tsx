@@ -1,4 +1,4 @@
-import { FaFacebook } from 'react-icons/fa';
+import { FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa';
 import bbllogo from '../assets/bbllogo.png';
@@ -36,6 +36,9 @@ const NavBar = () => {
             </a>
             <a href="https://www.linkedin.com/company/banyan-bay-ltd/" target="_blank">
                 <FaLinkedin className='text-white' size={28} />
+            </a>
+            <a href='https://wa.me/+8801335086978' target="_blank">
+                <FaWhatsapp size={28} />
             </a>
           </div>
         </div>
