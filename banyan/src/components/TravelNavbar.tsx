@@ -40,14 +40,14 @@ const TravelNavBar = () => {
             <a href="https://www.facebook.com/BBayTravel" target='_blank'>
                 <FaFacebook className='text-white' size={28} />
             </a>
+            <a href='https://wa.me/+8801335086979' target="_blank">
+                <FaWhatsapp size={28} />
+            </a>
             <a href="https://www.instagram.com/bbaytravel" target="_blank" >
                 <FaInstagram className='text-white' size={28} />
             </a>
             <a href="https://www.linkedin.com/company/banyan-bay-ltd/" target="_blank">
                 <FaLinkedin className='text-white' size={28} />
-            </a>
-            <a href='https://wa.me/+8801335086978' target="_blank">
-                <FaWhatsapp size={28} />
             </a>
           </div>
       </header>
