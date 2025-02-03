@@ -31,14 +31,14 @@ const NavBar = () => {
             <a href="https://www.facebook.com/BanyanBayLtd" target='_blank'>
                 <FaFacebook className='text-white' size={28} />
             </a>
+            <a href='https://wa.me/+8801335086978' target="_blank">
+                <FaWhatsapp size={28} />
+            </a>
             <a href="https://www.instagram.com/banyanbayltd" target="_blank" >
                 <FaInstagram className='text-white' size={28} />
             </a>
             <a href="https://www.linkedin.com/company/banyan-bay-ltd/" target="_blank">
                 <FaLinkedin className='text-white' size={28} />
-            </a>
-            <a href='https://wa.me/+8801335086978' target="_blank">
-                <FaWhatsapp size={28} />
             </a>
           </div>
         </div>
