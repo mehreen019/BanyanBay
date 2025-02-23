@@ -76,6 +76,16 @@
     opacity: 0.8;
   }
 
+  .social-icons button {
+    margin-top: -34px;
+    color: #ffffff;
+    transition: opacity 0.2s ease;
+  }
+  
+  .social-icons button:hover {
+    opacity: 0.8;
+  }
+
   .copyright {
     text-align: center;
     margin-top: 2rem;

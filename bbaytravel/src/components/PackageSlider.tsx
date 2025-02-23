@@ -140,9 +140,11 @@ const PackageSlider = () => {
                         <p>Guangzhou (Canton fair)</p>
                         <p>9D8N Business Trip</p>
                     </div>
-                    <LazyLoad>
-                        <img src={china} alt="china" />
-                    </LazyLoad>
+                    <LazyLoad height={200} offset={100} once>
+    <img src={china} alt="china" />
+</LazyLoad>
+
+
                 </div>
                 <div className="item">
                     <div className="content">
@@ -151,7 +153,7 @@ const PackageSlider = () => {
                         <p>Bangkok - Pattaya </p>
                         <p>5D4N</p>
                     </div>
-                    <LazyLoad>
+                    <LazyLoad height={200} offset={100} once>
                         <img src={bangkok} alt="bangkok" />
                     </LazyLoad>
                 </div>
@@ -162,7 +164,7 @@ const PackageSlider = () => {
                         <p>Nagarkot & Kathmandu </p>
                         <p>4D3N</p>
                     </div>
-                    <LazyLoad>
+                    <LazyLoad height={200} offset={100} once>
                         <img src={kathmandu} alt="kathmandu" />
                     </LazyLoad>
                 </div>
@@ -173,7 +175,7 @@ const PackageSlider = () => {
                         <p>Nagarkot, Kathmandu & Pokhara</p>
                         <p>5D4N</p>
                     </div>
-                    <LazyLoad>
+                    <LazyLoad height={200} offset={100} once>
                         <img src={pokhara} alt="pokhara" />
                     </LazyLoad>
                 </div>
@@ -184,7 +186,7 @@ const PackageSlider = () => {
                         <p>Pattaya </p>
                         <p>4D3N</p>
                     </div>
-                    <LazyLoad>
+                    <LazyLoad height={200} offset={100} once>
                         <img src={pattaya} alt="pattaya" />
                     </LazyLoad>
                 </div>

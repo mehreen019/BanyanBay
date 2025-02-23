@@ -1,7 +1,10 @@
-import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa6"
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp, FaWeixin } from "react-icons/fa6"
 import bbtlogo from "../assets/bbtlogo.png"
+import { useModal } from '../Provider/ModalProvider.tsx';
 
 const TravelNavBar = () => {
+    const { openModal } = useModal();
+
     return (
       <header>
           <div className="logo-travel">
@@ -28,8 +31,7 @@ const TravelNavBar = () => {
                         <span className="coming-soon">coming soon</span>
                     </li>
                     <li>
-                        <a className='dropdown-link'>Career</a>
-                        <span className="coming-soon">coming soon</span>
+                        <a href="https://banyanbayltd.com/Careers" className='dropdown-link'>Career</a>
                     </li>
                 </ul>
               </li>
@@ -49,6 +51,9 @@ const TravelNavBar = () => {
             <a href="https://www.linkedin.com/company/banyan-bay-ltd/" target="_blank">
                 <FaLinkedin className='text-white' size={28} />
             </a>
+            <button onClick={() => openModal('pop-up')}  style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', color: 'white' }}>
+                <FaWeixin className='text-white' size={`min(28px, 8vw)`}/>
+            </button>
           </div>
       </header>
     )

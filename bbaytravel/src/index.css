@@ -19,12 +19,10 @@ svg {
 
 /* header */
 header {
+    display: flex;
     width: 1200px;
     max-width: 90%;
     margin: auto;
-    display: grid;
-    grid-template-columns: 100px 1fr 100px;
-    grid-template-rows: 50px;
     align-items: center;
     position: relative;
     z-index: 100;
@@ -39,9 +37,9 @@ header .logo-travel{
 }
 
 header .logo-travel img {
-    width: 70%;
-    height: 70%;
-    margin-top: 20px;   
+    width: 80px;
+    height: 40px;
+    margin-top: 20px; 
 }
 
 header .menu {
@@ -51,6 +49,7 @@ header .menu {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
+    width: 120%;
     margin-top: 25px;
     font-weight: 500;
     font-family: 'Karla', sans-serif;
@@ -58,15 +57,13 @@ header .menu {
 
 header .social-links {
     display: flex;
-    gap: 25px;
     margin-top: 33px;
     justify-content: flex-start;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 header .social-links-b {
     display: flex;
-    gap: 25px;
     margin-top: 33px;
     justify-content: flex-start;
     margin-left: 20px;
@@ -1304,10 +1301,8 @@ color: #575757;
 
 @media screen and (max-width: 635px) {
 
-    header {
-        width: 80%;
-        justify-content: left;
-        grid-template-columns: 60px .6fr 60px;
+    header .logo-travel img {
+        margin-top: 10px; 
     }
 
     header li:nth-child(3){
@@ -1388,27 +1383,7 @@ color: #575757;
 
 @media screen and (max-width: 480px) {
     
-    header {
-        width: 70%;
-        justify-content: left;
-        grid-template-columns: 60px .4fr 50px;
-    }
-
-    header .logo-travel img{
-       margin-top: 0px;
-    }
-
-    header .logo-travel{
-        margin-top: 10px;
-    }
-
-    header .menu{
-        margin-top: 10px;
-    }
-
-    header .social-links{
-        margin-top: 15px;
-    }
+    
 
     header li:nth-child(3),
     header li:nth-child(2),
@@ -1499,12 +1474,6 @@ color: #575757;
 }
 
 @media screen and (max-width: 391px) {
-
-    header {
-        width: 70%;
-        justify-content: left;
-        grid-template-columns: 60px .3fr 50px;
-    }
 
     .slider .list .item .content p{
         font-size: 12px;

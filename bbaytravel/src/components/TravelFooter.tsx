@@ -2,8 +2,13 @@ import React from 'react';
 import { Facebook, Linkedin, Instagram } from 'lucide-react';
 import '../Footer.css';
 import { PiWhatsappLogo } from 'react-icons/pi';
+import { FaWeixin } from 'react-icons/fa6';
+import { useModal } from '../Provider/ModalProvider';
 
 const TravelFooter: React.FC = () => {
+
+  const { openModal } = useModal();
+
   return (
     <footer className="footer" id="contact-area">
       <div className="footer-content">
@@ -20,6 +25,7 @@ const TravelFooter: React.FC = () => {
             <a href='https://wa.me/+8801335086979' aria-label="Whatsapp" className='whatsapp-icon' target='blank'><PiWhatsappLogo size={60} /></a>
             <a href="https://www.linkedin.com/company/banyan-bay-ltd/" aria-label="LinkedIn"  target='blank'><Linkedin size={24} /></a>
             <a href="https://www.instagram.com/bbaytravel" aria-label="Instagram"  target='blank'><Instagram size={24} /></a>
+            <button onClick={() => openModal('pop-up')}  style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', color: 'white' }}><FaWeixin size={24} /></button>
           </div>
         </div>
       </div>

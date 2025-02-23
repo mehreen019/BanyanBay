@@ -1,0 +1,26 @@
+.popup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+  }
+
+.cross {
+    color: #00000085;
+    display: flex;
+    border: none;
+    justify-self: unset;
+    justify-content: flex-end;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    height: 20px;
+    width: 100%;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
