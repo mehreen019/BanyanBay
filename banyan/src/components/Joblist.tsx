@@ -1,6 +1,7 @@
 import React from 'react';
 import { jobs } from '../types/Job';
 import '../styles/JobList.css';
+import { Link } from 'react-router-dom';
 
 const JobList: React.FC = () => {
   return (
@@ -13,7 +14,9 @@ const JobList: React.FC = () => {
       {jobs.map((job, index) => (
         <div key={index} className="job-card">
           <h2>
-            <a href={`${job.link}`} className="job-title">{job.title}</a>
+            <Link to={`/Careers/${job.title.replace(/\s+/g, '-')}`} className="job-title">
+              {job.title}
+            </Link>
           </h2>
         </div>
       ))}

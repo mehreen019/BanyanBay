@@ -51,8 +51,6 @@
     margin-left: 2%;
     margin-bottom: auto;
     display: flex;
-
-
     text-decoration: none;
   }
   
@@ -98,3 +96,77 @@
   .pagination button:hover {
     background: #c53030;
   }
+
+.app-container{
+    width: 99vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+  .right-section {
+    margin: 0 20%;
+    padding: 20px;
+  }
+  
+  
+  .job-title-sub {
+    font-size: 5vh;
+    font-weight: bold;
+    color: #1f2937;
+  }
+
+  .job-description {
+    margin-bottom: 2rem;
+    color: #4b5563;
+    font-size: 18px;
+    margin-top: 3rem;
+  }
+
+  .subheading {
+    margin-top: 2rem;
+    color: #4b5563;
+    font-size: 3vh;
+  }
+  
+  .requirements-list {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+  }
+  
+  .requirement-item {
+    color: #4b5563;
+  }
+
+  .apply-button {
+    background-color: #206920;
+    color: rgb(238, 235, 235);
+    border: none;
+    padding: 16px 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 200px;
+    font-size: large;
+    margin-top: 20px;
+    margin-bottom: 10%;
+}
+
+.apply-button:hover {
+    background-color: #1a531a;
+}
+
+.arrow-back {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.arrow-back h3 {
+    font-size: 1.5rem;
+    color: #1f2937;
+}

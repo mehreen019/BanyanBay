@@ -24,7 +24,7 @@ const TravelNavBar = () => {
                 </ul>
               </li>
               <li className="dropdown">
-                <a className='nav-link' href="/Careers">Work With Us</a>
+                <a className='nav-link'>Work With Us</a>
                 <ul className="dropdown-menu">
                     <li>
                         <a className='dropdown-link'>Business</a>
