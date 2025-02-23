@@ -19,8 +19,7 @@ const NavBar = () => {
                         <span className="coming-soon">coming soon</span>
                     </li>
                     <li>
-                        <a className='dropdown-link'>Career</a>
-                        <span className="coming-soon">coming soon</span>
+                        <a href='/careers' className='dropdown-link'>Career</a>
                     </li>
                 </ul>
             </li>

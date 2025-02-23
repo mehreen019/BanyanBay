@@ -1,11 +1,11 @@
-import CareerNavBar from '../components/CareerNavbar'
-import Vacancies from '../components/Vacancies'
+import JobList from '../components/Joblist'
+import NavBar from '../components/NavBar'
 
 const Careers = () => {
   return (
     <div>
-        <CareerNavBar />
-        <Vacancies />   
+        <NavBar />
+        <JobList />   
     </div>
   )
 }
